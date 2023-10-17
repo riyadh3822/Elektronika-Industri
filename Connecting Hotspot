@@ -11,8 +11,7 @@ const char* password = "Passworddarihotspotkalian";   // Isi char tersebut denga
 void setup(){
  
     Serial.begin(9600);
- 
-    WiFi.mode(WIFI_STA);
+
     WiFi.begin(ssid, password);
     Serial.println("\nMenghubungkan ke WiFi Network ..");
  
