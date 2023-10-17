@@ -1,32 +1,31 @@
 /*
-*  ESP32 WiFi Connect To an Existing Network
-*  Full Tutorial @ https://deepbluembedded.com/esp32-wifi-library-examples-tutorial-arduino/
+Konektivitas ESP32 atau ESP8266 dengan Hotspot HP kalian
 */
  
-#include <WiFi.h>
+#include <WiFi.h>   //library untuk menghidupkan fitur WiFi pada ESP
  
-// Replace with your own network credentials
-const char* ssid = "yourNetworkSSID";
-const char* password = "yourNetworkPassword";
+
+const char* ssid = "Namahotspotkalian";               // Isi char tersebut dengan nama hotspot kalian. ex:galaxy-A71
+const char* password = "Passworddarihotspotkalian";   // Isi char tersebut dengan password WiFi kalian: ex:riyadhganteng123
  
 void setup(){
  
-    Serial.begin(115200);
+    Serial.begin(9600);
  
     WiFi.mode(WIFI_STA);
     WiFi.begin(ssid, password);
-    Serial.println("\nConnecting to WiFi Network ..");
+    Serial.println("\nMenghubungkan ke WiFi Network ..");
  
     while(WiFi.status() != WL_CONNECTED){
         Serial.print(".");
         delay(100);
     }
  
-    Serial.println("\nConnected to the WiFi network");
+    Serial.println("\nTerhubung ke WiFi network");
     Serial.print("Local ESP32 IP: ");
     Serial.println(WiFi.localIP());
 }
  
 void loop(){
-    // Do Nothing
+    //
 }
