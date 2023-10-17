@@ -2,7 +2,7 @@
 Konektivitas ESP32 atau ESP8266 dengan Hotspot HP kalian
 */
  
-#include <WiFi.h>   //library untuk menghidupkan fitur WiFi pada ESP
+#include <ESP8266WiFi.h>  //library untuk menghidupkan fitur WiFi pada ESP
  
 
 const char* ssid = "Namahotspotkalian";               // Isi char tersebut dengan nama hotspot kalian. ex:galaxy-A71
